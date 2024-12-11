@@ -1,0 +1,32 @@
+#####
+name: CycleGan
+bidirect: False #Unidirectional or bidirectional
+regist: True    # With or without registration network
+noise_level: 1  #  noise level
+port: 6019   #  port parameters
+# save_root: './output_consistance_tb/Cyc/NC+R/'
+# image_save: './output_consistance_tb/Cyc/NC+R/img/'
+save_root: './output_consistance/Cyc/NC+R/'
+image_save: './output_consistance/Cyc/NC+R/img/'
+# lamda weight
+Adv_lamda: 1
+Cyc_lamda: 10
+Corr_lamda: 20
+Smooth_lamda: 10
+Consistency_lambda: 4
+
+epoch: 0        # starting epoch
+n_epochs: 500       # Hcd ow often do you want to display output images during training
+batchSize: 32     # size of the batches
+# batchSize: 1
+dataroot: '/home/PET-CT/huutien/Reg-GAN/2D_consistance/train'     # root directory of the dataset
+val_dataroot: '/home/PET-CT/huutien/Reg-GAN/2D_consistance/val'
+lr: 0.0001                   # initial learning rate
+decay_epoch: 20            # epoch to start linearly decaying the learning rate to 0
+size: 256                # size of the data crop
+input_nc: 2 
+input_RA: 1        
+output_nc: 1                  
+cuda: True                
+n_cpu: 8
+
